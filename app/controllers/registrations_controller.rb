@@ -13,8 +13,7 @@ class RegistrationsController < ApplicationController
     @registration = @event.registrations.new(registration_params)
 
     if @registration.save
-      redirect_to event_registrations_url(@event),
-        notice: "Thanks for registering!"
+      redirect_to event_registrations_url(@event), notice: "Thanks for registering!"
     else
       render :new
     end
